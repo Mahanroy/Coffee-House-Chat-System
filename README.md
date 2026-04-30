@@ -38,7 +38,7 @@
 
 ### 🔐 Password Validation
 
-<img src="Screen Shorts/Screenshot_2026-04-30_142834.png" alt="Incorrect password error state" width="460"/>
+<img src="Screen Shorts/Screenshot 2026-04-30 142834.png" alt="Incorrect password error state" width="460"/>
 
 <br/><br/>
 
