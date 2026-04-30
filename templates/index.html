@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House Chat System - Join or Create Room</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="lobby-body">
+    <div class="glass-container login-container">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <h1>Coffee House Chat System</h1>
+        </div>
+        <p class="subtitle">Connect in real-time, securely.</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="/" class="lobby-form">
+            <div class="input-group">
+                <label for="name">Display Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your display name" value="{{ name if name else '' }}" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="room">Room Code</label>
+                <input type="text" id="room" name="room" placeholder="Enter room code" value="{{ room if room else '' }}" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Room Password (Optional)</label>
+                <input type="password" id="password" name="password" placeholder="Leave blank for public">
+            </div>
+
+            <div class="action-buttons">
+                <button type="submit" name="action" value="join" class="btn btn-primary">Join Room</button>
+                <button type="submit" name="action" value="create" class="btn btn-secondary">Create Room</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
