@@ -44,7 +44,7 @@
 
 ### 💬 Live Chat Room
 
-<img src="Screen Shorts/Screenshot_2026-04-30_143511.png" alt="Chat room with real-time messages and participant list" width="820"/>
+<img src="Screen Shorts/Screenshot 2026-04-30 143511.png" alt="Chat room with real-time messages and participant list" width="820"/>
 
 </div>
 
