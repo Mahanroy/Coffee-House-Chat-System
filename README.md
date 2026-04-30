@@ -32,7 +32,7 @@
 
 ### 🚪 Join / Create a Room
 
-<img src="Screen Shorts/Screenshot_2026-04-30_141645.png" alt="Login Screen — Enter display name, room code, and optional password" width="460"/>
+<img src="Screen Shorts/Screenshot 2026-04-30 141645.png" alt="Login Screen — Enter display name, room code, and optional password" width="460"/>
 
 <br/><br/>
 
