@@ -26,16 +26,44 @@
 
 <br/>
 
+## 📸 Screenshots
+
+<div align="center">
+
+### 🚪 Join / Create a Room
+
+<img src="Screen Shorts/Screenshot_2026-04-30_141645.png" alt="Login Screen — Enter display name, room code, and optional password" width="460"/>
+
+<br/><br/>
+
+### 🔐 Password Validation
+
+<img src="Screen Shorts/Screenshot_2026-04-30_142834.png" alt="Incorrect password error state" width="460"/>
+
+<br/><br/>
+
+### 💬 Live Chat Room
+
+<img src="Screen Shorts/Screenshot_2026-04-30_143511.png" alt="Chat room with real-time messages and participant list" width="820"/>
+
+</div>
+
+<br/>
+
+---
+
 ## ✨ Features
 
 | Feature | Description |
 |---|---|
 | ⚡ **Real-Time Messaging** | Instant bidirectional communication powered by WebSockets |
-| 🏠 **Chat Rooms** | Join or create rooms to keep conversations organized |
-| 👤 **Usernames** | Set a display name before entering the chat |
-| 📡 **Live Presence** | See when users join and leave the room |
-| 🎨 **Custom UI** | A warm, coffee-themed interface built from scratch |
-| 🌐 **Browser-Based** | No installation needed for users — just open and chat |
+| 🏠 **Chat Rooms** | Join or create rooms using a unique room code |
+| 🔐 **Password Protection** | Optionally lock rooms with a password |
+| 👤 **Display Names** | Set a custom username before entering |
+| 📡 **Live Presence** | Room entry/exit notifications broadcast to all participants |
+| 👥 **Participant Count** | See how many users are currently online in the room |
+| 🎨 **Custom UI** | Warm, coffee-themed dark interface built from scratch |
+| 🌐 **Browser-Based** | No client installation needed — just open and chat |
 
 <br/>
 
@@ -53,7 +81,7 @@ Transport    →   WebSockets (with long-polling fallback)
 
 ### Prerequisites
 
-Make sure you have **Python 3.8+** and **pip** installed on your machine.
+Make sure you have **Python 3.8+** and **pip** installed.
 
 ```bash
 python --version   # Should be 3.8 or higher
@@ -92,7 +120,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-The `requirements.txt` includes:
+`requirements.txt` includes:
 
 ```
 Flask==3.0.3
@@ -114,7 +142,7 @@ Then open your browser and navigate to:
 http://127.0.0.1:5000
 ```
 
-> 💡 To test real-time chat, open **multiple browser tabs or windows** and start messaging!
+> 💡 Open **multiple browser tabs or windows** to simulate multiple users chatting in real-time!
 
 <br/>
 
@@ -123,25 +151,21 @@ http://127.0.0.1:5000
 ```
 Coffee-House-Chat-System/
 │
-├── app.py                  # Main Flask application & SocketIO event handlers
+├── app.py                  # Main Flask app & SocketIO event handlers
 ├── requirements.txt        # Python dependencies
 │
 ├── templates/              # Jinja2 HTML templates
-│   └── ...                 # (index, chat room pages, etc.)
+│   └── ...
 │
 ├── static/                 # Frontend assets
 │   ├── css/                # Stylesheets
-│   ├── js/                 # Client-side JavaScript
-│   └── ...
+│   └── js/                 # Client-side JavaScript
 │
-└── Screen Shorts/          # App screenshots & previews
+└── Screen Shorts/          # App screenshots
+    ├── Screenshot_2026-04-30_141645.png
+    ├── Screenshot_2026-04-30_142834.png
+    └── Screenshot_2026-04-30_143511.png
 ```
-
-<br/>
-
-## 📸 Screenshots
-
-> Check the [`Screen Shorts/`](./Screen%20Shorts/) folder for visual previews of the application.
 
 <br/>
 
@@ -157,7 +181,7 @@ Flask serves the HTML page
 Client connects via Socket.IO
       │
       ▼
-User enters username & joins a room
+User enters display name, room code & optional password
       │
       ▼
 Messages are emitted as WebSocket events
@@ -180,7 +204,7 @@ if __name__ == '__main__':
     socketio.run(app, debug=True, port=5000)
 ```
 
-To run on a different port:
+To deploy on a custom host and port:
 
 ```python
 socketio.run(app, debug=False, host='0.0.0.0', port=8080)
@@ -198,7 +222,7 @@ Contributions are welcome! Here's how to get involved:
 4. **Push** to your branch → `git push origin feature/your-feature-name`
 5. **Open** a Pull Request
 
-Please keep PRs focused and descriptive. Bug reports and feature suggestions can be filed via [Issues](https://github.com/Mahanroy/Coffee-House-Chat-System/issues).
+Bug reports and feature suggestions can be filed via [Issues](https://github.com/Mahanroy/Coffee-House-Chat-System/issues).
 
 <br/>
 
